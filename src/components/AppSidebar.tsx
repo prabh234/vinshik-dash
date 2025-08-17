@@ -40,10 +40,9 @@ export function AppSidebar() {
         <div className="p-6 border-b border-sidebar-border">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 bg-brand-teal rounded-lg flex items-center justify-center">
-              <div className="w-4 h-4 bg-white rounded-sm"></div>
             </div>
             {!isCollapsed && (
-              <span className="text-xl font-bold text-brand-teal">VinShik</span>
+               <h1 className="text-4xl font-bold text-black"><span className="text-[#0d8094]">Vin</span>Shik</h1>
             )}
           </div>
         </div>
