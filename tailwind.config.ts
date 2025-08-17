@@ -24,29 +24,51 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				
+				// VinShik brand colors
+				'brand-teal': 'hsl(var(--brand-teal))',
+				'brand-teal-light': 'hsl(var(--brand-teal-light))',
+				
+				// Text colors
+				'text-primary': 'hsl(var(--text-primary))',
+				'text-secondary': 'hsl(var(--text-secondary))',
+				'text-muted': 'hsl(var(--text-muted))',
+				
+				// Chart colors
+				'chart-blue': 'hsl(var(--chart-blue))',
+				'chart-orange': 'hsl(var(--chart-orange))',
+				'chart-green': 'hsl(var(--chart-green))',
+				'chart-purple': 'hsl(var(--chart-purple))',
+				
+				// Status backgrounds
+				'status-blue-bg': 'hsl(var(--status-blue-bg))',
+				'status-orange-bg': 'hsl(var(--status-orange-bg))',
+				'status-green-bg': 'hsl(var(--status-green-bg))',
+				'status-purple-bg': 'hsl(var(--status-purple-bg))',
+				
 				primary: {
-					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					DEFAULT: 'hsl(var(--brand-teal))',
+					foreground: 'hsl(var(--background))'
 				},
 				secondary: {
-					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))'
+					DEFAULT: 'hsl(var(--background))',
+					foreground: 'hsl(var(--text-secondary))'
 				},
 				destructive: {
-					DEFAULT: 'hsl(var(--destructive))',
-					foreground: 'hsl(var(--destructive-foreground))'
+					DEFAULT: 'hsl(var(--error))',
+					foreground: 'hsl(var(--background))'
 				},
 				muted: {
-					DEFAULT: 'hsl(var(--muted))',
-					foreground: 'hsl(var(--muted-foreground))'
+					DEFAULT: 'hsl(var(--background))',
+					foreground: 'hsl(var(--text-muted))'
 				},
 				accent: {
-					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))'
+					DEFAULT: 'hsl(var(--sidebar-active))',
+					foreground: 'hsl(var(--sidebar-active-foreground))'
 				},
 				popover: {
-					DEFAULT: 'hsl(var(--popover))',
-					foreground: 'hsl(var(--popover-foreground))'
+					DEFAULT: 'hsl(var(--card))',
+					foreground: 'hsl(var(--card-foreground))'
 				},
 				card: {
 					DEFAULT: 'hsl(var(--card))',
@@ -55,12 +77,12 @@ export default {
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
+					primary: 'hsl(var(--sidebar-active-foreground))',
+					'primary-foreground': 'hsl(var(--sidebar-background))',
+					accent: 'hsl(var(--sidebar-active))',
+					'accent-foreground': 'hsl(var(--sidebar-active-foreground))',
 					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
+					ring: 'hsl(var(--ring))'
 				}
 			},
 			borderRadius: {
