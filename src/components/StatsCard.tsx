@@ -40,33 +40,27 @@ function MiniChart({ color }: { color: "blue" | "orange" | "green" | "purple" })
 }
 
 export function StatsCard({ title, value, change, isPositive, chartColor }: StatsCardProps) {
-  const bgColorClass = backgroundColorClasses[chartColor];
-  
   return (
-    <Card className="border border-border shadow-sm hover:shadow-md transition-shadow">
-      <CardHeader className="pb-3">
-        <div className="flex items-center justify-between">
-          <div>
-            <p className="text-sm font-medium text-text-secondary">{title}</p>
-            <div className="flex items-center gap-2 mt-1">
-              <div className={`px-2 py-1 rounded-full ${bgColorClass} flex items-center gap-1`}>
-                {isPositive ? (
-                  <TrendingUp className="w-3 h-3 text-success" />
-                ) : (
-                  <TrendingDown className="w-3 h-3 text-error" />
-                )}
-                <span className={`text-xs font-medium ${isPositive ? 'text-success' : 'text-error'}`}>
-                  {change}
-                </span>
-              </div>
-            </div>
+    <Card className="border-0 bg-card shadow-sm rounded-2xl p-6 hover:shadow-md transition-shadow">
+      <div className="flex items-start justify-between mb-6">
+        <div className="flex-1">
+          <p className="text-sm font-medium text-text-secondary mb-3">{title}</p>
+          <div className="flex items-center gap-2">
+            {isPositive ? (
+              <TrendingUp className="w-4 h-4 text-success" />
+            ) : (
+              <TrendingDown className="w-4 h-4 text-error" />
+            )}
+            <span className={`text-sm font-medium ${isPositive ? 'text-success' : 'text-error'}`}>
+              {change}
+            </span>
           </div>
+        </div>
+        <div className="flex-shrink-0 ml-4">
           <MiniChart color={chartColor} />
         </div>
-      </CardHeader>
-      <CardContent className="pt-0">
-        <div className="text-2xl font-bold text-text-primary">{value}</div>
-      </CardContent>
+      </div>
+      <div className="text-3xl font-bold text-text-primary leading-none">{value}</div>
     </Card>
   );
 }
