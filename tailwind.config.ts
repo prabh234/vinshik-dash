@@ -46,6 +46,10 @@ export default {
 				'status-green-bg': 'hsl(var(--status-green-bg))',
 				'status-purple-bg': 'hsl(var(--status-purple-bg))',
 				
+				// Success/Error colors
+				'success': 'hsl(var(--success))',
+				'error': 'hsl(var(--error))',
+				
 				primary: {
 					DEFAULT: 'hsl(var(--brand-teal))',
 					foreground: 'hsl(var(--background))'
