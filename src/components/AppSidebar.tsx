@@ -39,8 +39,6 @@ export function AppSidebar() {
         {/* Logo */}
         <div className="p-6 border-b border-sidebar-border">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-brand-teal rounded-lg flex items-center justify-center">
-            </div>
             {!isCollapsed && (
                <h1 className="text-4xl font-bold text-black"><span className="text-[#0d8094]">Vin</span>Shik</h1>
             )}
