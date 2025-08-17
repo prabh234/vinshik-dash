@@ -41,26 +41,28 @@ function MiniChart({ color }: { color: "blue" | "orange" | "green" | "purple" })
 
 export function StatsCard({ title, value, change, isPositive, chartColor }: StatsCardProps) {
   return (
-    <Card className="border-0 bg-card shadow-sm rounded-2xl p-6 hover:shadow-md transition-shadow">
-      <div className="flex items-start justify-between mb-6">
-        <div className="flex-1">
-          <p className="text-sm font-medium text-text-secondary mb-3">{title}</p>
-          <div className="flex items-center gap-2">
-            {isPositive ? (
-              <TrendingUp className="w-4 h-4 text-success" />
-            ) : (
-              <TrendingDown className="w-4 h-4 text-error" />
-            )}
-            <span className={`text-sm font-medium ${isPositive ? 'text-success' : 'text-error'}`}>
-              {change}
-            </span>
+    <Card className="border-0 bg-card shadow-sm rounded-2xl overflow-hidden">
+      <div className="p-4">
+        <div className="flex items-start justify-between mb-4">
+          <div className="flex-1 min-w-0">
+            <p className="text-sm font-medium text-text-secondary mb-2 truncate">{title}</p>
+            <div className="flex items-center gap-2">
+              {isPositive ? (
+                <TrendingUp className="w-3 h-3 text-success flex-shrink-0" />
+              ) : (
+                <TrendingDown className="w-3 h-3 text-error flex-shrink-0" />
+              )}
+              <span className={`text-xs font-medium ${isPositive ? 'text-success' : 'text-error'}`}>
+                {change}
+              </span>
+            </div>
+          </div>
+          <div className="flex-shrink-0 ml-3">
+            <MiniChart color={chartColor} />
           </div>
         </div>
-        <div className="flex-shrink-0 ml-4">
-          <MiniChart color={chartColor} />
-        </div>
+        <div className="text-2xl font-bold text-text-primary leading-tight">{value}</div>
       </div>
-      <div className="text-3xl font-bold text-text-primary leading-none">{value}</div>
     </Card>
   );
 }
